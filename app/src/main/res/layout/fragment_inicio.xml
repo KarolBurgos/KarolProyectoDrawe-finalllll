@@ -1,0 +1,208 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sistemas.karolproyectoandroid.InicioFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="366dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center"
+                android:elevation="5dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="176dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="30dp"
+                        app:srcCompat="@drawable/i" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton2"
+                                android:layout_width="114dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Calculadora" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="126dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton"
+                                android:layout_width="102dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Profesores" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="126dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton1"
+                                android:layout_width="113dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Imagenes" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="126dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton4"
+                                android:layout_width="113dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView102"
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Informacion" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton5"
+                                android:layout_width="105dp"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView105"
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Grados 2017" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="126dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageButton6"
+                                android:layout_width="111dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_info_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView106"
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Informacion" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
