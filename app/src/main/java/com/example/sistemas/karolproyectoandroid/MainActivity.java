@@ -3,7 +3,6 @@ package com.example.sistemas.karolproyectoandroid;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
@@ -107,20 +106,20 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment=null;
         Class fragmentClass=InicioFragment.class;
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.ini) {
             // Handle the camera action
-            fragmentClass=InicioFragment.class;
-        } else if (id == R.id.nav_gallery) {
+            fragmentClass=UbicacionFragment.class;
+        } else if (id == R.id.profe) {
 
              fragmentClass=SegundoFragment.class;
         } else if (id == R.id.nav_slideshow) {
 
-            fragmentClass=LoginFragment.class;
+            fragmentClass=InicioFragment.class;
 
         } else if (id == R.id.nav_manage) {
-
+            fragmentClass=MapaFragment.class;
         } else if (id == R.id.nav_share) {
-
+            fragmentClass=CalcuFragment.class;
         } else if (id == R.id.nav_send) {
             finish();
         }
