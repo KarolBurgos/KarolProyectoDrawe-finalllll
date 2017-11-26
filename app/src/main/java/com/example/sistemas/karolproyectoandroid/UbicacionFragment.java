@@ -5,10 +5,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -33,7 +37,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class UbicacionFragment extends Fragment implements OnMapReadyCallback {
+    Button btncero,btnuno,btndos,btntres,btncuatro,btncinco,btnseis,btnsiete,btn0cho,btnnueve,btnpunto,
+            btnigual,btnsuma,btnresta,btnmulti,btndiv,btnlimpiar,acercade;
 
+    EditText elproceso,elconcatenar;
+    private FragmentActivity myContext;
     private GoogleMap mMap;
     public double lat = 0.0;
     public double lon = 0.0;
@@ -49,8 +57,85 @@ public class UbicacionFragment extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v =inflater.inflate(R.layout.fragment_ubicacion, container, false);
-        return v;
+        final View view = inflater.inflate(R.layout.fragment_ubicacion, container, false);
+        btncero= (Button) view.findViewById(R.id.profesores);
+        btntres= (Button) view.findViewById(R.id.ubicacion);
+        btncuatro= (Button) view.findViewById(R.id.wifi);
+        acercade= (Button) view.findViewById(R.id.acercade);
+
+        btncero.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // elconcatenar =(EditText)view.findViewById(R.id.proceso);
+                //elproceso.setText(elconcatenar.getText().toString()+"9");
+                Fragment fragment = null;
+                Class fragmentClass= SegundoFragment.class;
+                try{
+                    fragment = (Fragment) fragmentClass.newInstance();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                FragmentManager fragmentManager=myContext.getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+
+            }
+        });
+
+
+        btntres.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // elconcatenar =(EditText)view.findViewById(R.id.proceso);
+                //elproceso.setText(elconcatenar.getText().toString()+"9");
+                Fragment fragment = null;
+                Class fragmentClass= UbicacionFragment.class;
+                try{
+                    fragment = (Fragment) fragmentClass.newInstance();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                FragmentManager fragmentManager=myContext.getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+
+            }
+        });
+
+        btncuatro.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // elconcatenar =(EditText)view.findViewById(R.id.proceso);
+                //elproceso.setText(elconcatenar.getText().toString()+"9");
+                Fragment fragment = null;
+                Class fragmentClass= MapaFragment.class;
+                try{
+                    fragment = (Fragment) fragmentClass.newInstance();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                FragmentManager fragmentManager=myContext.getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+
+            }
+        });
+
+        acercade.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // elconcatenar =(EditText)view.findViewById(R.id.proceso);
+                //elproceso.setText(elconcatenar.getText().toString()+"9");
+                Fragment fragment = null;
+                Class fragmentClass= AcercaDeeFragment.class;
+                try{
+                    fragment = (Fragment) fragmentClass.newInstance();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                FragmentManager fragmentManager=myContext.getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+
+            }
+        });
+        return view;
     }
     SupportMapFragment mapFragment;
 
@@ -63,6 +148,8 @@ public class UbicacionFragment extends Fragment implements OnMapReadyCallback {
         retrofit=new Retrofit.Builder().baseUrl("https://www.datos.gov.co/resource/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
+
+
     }
 
     @Override
@@ -71,5 +158,11 @@ public class UbicacionFragment extends Fragment implements OnMapReadyCallback {
         LatLng sydney = new LatLng(1.3625542,-78.1810467);
         mMap.addMarker(new MarkerOptions().position(sydney).title("El Diviso").snippet(""+"").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 5));
+    }
+    @Override
+    public void onAttach(Context context) {
+
+        myContext=(FragmentActivity) context;
+        super.onAttach(context);
     }
 }

@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sistemas.karolproyectoandroid.SplashScreen"
-    android:background="#050505">
+
+    android:background="#050505"
+    tools:context="@android:color/holo_green_light"
+    tools:showIn="@android:color/holo_green_light">
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"

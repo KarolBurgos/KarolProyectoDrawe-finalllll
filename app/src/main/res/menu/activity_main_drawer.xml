@@ -4,31 +4,36 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/ini"
-            android:icon="@drawable/ini"
+            android:icon="@drawable/ic_home"
             android:title="Inicio" />
         <item
             android:id="@+id/profe"
-            android:icon="@drawable/prof"
+            android:icon="@drawable/ic_profes"
             android:title="Profesores" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/infor"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="Información" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_home"
             android:title="Login" />
         <item
-            android:id="@+id/nav_manag"
+            android:id="@+id/navUBicacion"
             android:icon="@android:drawable/ic_dialog_map"
             android:title="Ubicación" />
+
+        <item
+            android:id="@+id/wifi"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="ZonasWifi" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@android:drawable/ic_menu_agenda"
                 android:title="Programación grados" />
             <item
                 android:id="@+id/nav_send"

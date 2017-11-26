@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Fragment fragment = null;
-                Class fragmentClass= InicioFragment.class;
+                Class fragmentClass= UbicacionFragment.class;
                 try{
                     fragment = (Fragment) fragmentClass.newInstance();
                 }catch (Exception e){
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
 
 
         Fragment fragment = null;
-        Class fragmentClass= InicioFragment.class;
+        Class fragmentClass= UbicacionFragment.class;
         try{
             fragment = (Fragment) fragmentClass.newInstance();
         }catch (Exception e){
@@ -104,23 +104,27 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         Fragment fragment=null;
-        Class fragmentClass=InicioFragment.class;
+        Class fragmentClass=UbicacionFragment.class;
 
         if (id == R.id.ini) {
             // Handle the camera action
-            fragmentClass=UbicacionFragment.class;
+             fragmentClass=UbicacionFragment.class;
+
         } else if (id == R.id.profe) {
 
              fragmentClass=SegundoFragment.class;
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.infor) {
 
-            fragmentClass=InicioFragment.class;
+            fragmentClass=InformacionFragment.class;
 
         } else if (id == R.id.nav_manage) {
             fragmentClass=MapaFragment.class;
-        } else if (id == R.id.nav_share) {
-            fragmentClass=CalcuFragment.class;
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.navUBicacion) {
+            fragmentClass=UbicacionnFragment.class;
+        }
+        else if (id == R.id.wifi) {
+            fragmentClass=MapaFragment.class;
+        }else if (id == R.id.nav_send) {
             finish();
         }
 
